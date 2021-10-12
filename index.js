@@ -17,3 +17,10 @@ function changeColor(e){
         div.style.backgroundColor = 'blue';
     }
 }
+
+ /* Task2 -- Задание:
+    Не изменяя расположения элемента script, исправьте ошибку сценария.
+    При загрузке данного сценария на странице должно отобразиться сообщение Hello world
+
+    script --- document.querySelector("#output").textContent = "Hello world"; --- расположен в head
+    */
