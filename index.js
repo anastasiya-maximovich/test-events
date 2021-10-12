@@ -24,3 +24,35 @@ function changeColor(e){
 
     script --- document.querySelector("#output").textContent = "Hello world"; --- расположен в head
     */
+
+
+/* Task3 -- Задание:
+    Реализуйте сценарий, который при нажатии на клавиши 1, 2 или 3 на клавиатуре будет добавлять рамку
+    красного цвета на соответствующий div. Если зажаты клавиши Ctrl + A, то красная рамка добавляется сразу
+    для всех div
+*/
+
+let boxes = document.querySelectorAll('.boxes div');
+
+document.addEventListener('keydown', addBorder);
+
+function addBorder(e){
+    console.log(e);
+    if(e.key === '1'){
+        boxes[0].classList.add('divBorder');
+        boxes[1].classList.remove('divBorder');
+        boxes[2].classList.remove('divBorder');
+    }else if(e.key === '2'){
+        boxes[1].classList.toggle('divBorder');
+        boxes[0].classList.remove('divBorder');
+        boxes[2].classList.remove('divBorder');
+    }else if(e.key === '3'){
+        boxes[2].classList.toggle('divBorder');
+        boxes[1].classList.remove('divBorder');
+        boxes[0].classList.remove('divBorder');
+    }else if(e.key === 'A' && e.shiftKey === true){
+        boxes.forEach(box => {
+            box.classList.add('divBorder');
+        })
+    }
+}
