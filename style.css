@@ -1,15 +1,7 @@
-#colorOutput {
+#element {
     width: 100px;
     height: 100px;
-}
-.boxes div {
-    display: inline-block;
-    width: 100px;
-    height: 100px;
-    background-color: green;
-    margin: 10px; 
-}
-
-.divBorder {
-    border: 2px solid red;
+    background-color: greenyellow;
+    position: absolute;
+    margin-top: 40px;
 }
